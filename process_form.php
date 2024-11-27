@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $mail->Body .= "<strong>Dirección:</strong> $direccion<br>";
             $mail->Body .= "<strong>Barrio:</strong> $barrio<br>";
             $mail->Body .= "<strong>Celular:</strong> $celular<br>";
-            $mail->Body .= "<strong>Teléfono:</strong> $telefono<br>";
+            $mail->Body .= "<strong>Numero de Emergencia:</strong> $telefono<br>";
             $mail->Body .= "<strong>Correo:</strong> $correo<br>";
             $mail->Body .= "<strong>Género:</strong> $genero<br>";
             $mail->Body .= "<strong>Estrato:</strong> $estrato<br>";
