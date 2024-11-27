@@ -250,3 +250,39 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
+
+
+/* Ajuste para campos select e input[type="date"] */
+.form :where(.input-box input, .select-box, .input-box input[type="date"]) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  background-color: #fff; /* Fondo blanco */
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+
+/* Ajuste adicional para select */
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;
+  background-color: #fff; /* Fondo blanco */
+
+  border-radius: 6px;
+  padding: 0 15px;
+}
+
+/* Efecto al enfocarse */
+.input-box input:focus, .select-box select:focus {
+  border-color: #fc4a1a; /* Resaltar el borde en foco */
+  box-shadow: 0 1px 4px rgba(252, 74, 26, 0.4); /* Efecto sutil */
+}
