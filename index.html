@@ -84,7 +84,7 @@
 
         <div class="input-box">
           <label>Nombres Y Apellidos</label>
-          <input type="text" placeholder="Nombres y Apellidos" name="nombre_apellido" required />
+          <input type="text" placeholder="" name="nombre_apellido" required />
         </div>
 
         <div class="input-box">
@@ -339,32 +339,73 @@
       </div>
       </form>
     </section>
+
+    <div id="validation-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <p>Por favor, completa <b>todos los campos</b> antes de continuar.</p>
+      </div>
+    </div>
+
   </body>
 
   <script>
-   document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", () => {
   const formSections = document.querySelectorAll(".form-section");
   const nextBtns = document.querySelectorAll(".next-btn");
   const prevBtns = document.querySelectorAll(".prev-btn");
+  const modal = document.getElementById("validation-modal");
+  const closeModalBtn = document.querySelector(".close-btn");
 
   let currentSection = 0;
 
-  // Función para mostrar una sección específica
+  // Mostrar una sección específica
   function showSection(index) {
     formSections.forEach((section, i) => {
-      section.classList.toggle("active", i === index); // Mostrar solo la sección activa
+      section.classList.toggle("active", i === index);
     });
-
-    // Desplazar hacia arriba al cambiar de sección
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
+  // Validar campos requeridos de la sección actual
+  function validateSection(section) {
+    const inputs = section.querySelectorAll("[required]");
+    for (let input of inputs) {
+      if (!input.value.trim()) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  // Mostrar modal
+  function showModal() {
+    modal.style.display = "block";
+  }
+
+  // Ocultar modal
+  function closeModal() {
+    modal.style.display = "none";
+  }
+
+  // Evento para cerrar el modal
+  closeModalBtn.addEventListener("click", closeModal);
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
   // Evento para botones "Siguiente"
-  nextBtns.forEach((btn) => {
+  nextBtns.forEach((btn, index) => {
     btn.addEventListener("click", () => {
-      if (currentSection < formSections.length - 1) {
-        currentSection++;
-        showSection(currentSection); // Mostrar la siguiente sección
+      if (validateSection(formSections[currentSection])) {
+        if (currentSection < formSections.length - 1) {
+          currentSection++;
+          showSection(currentSection);
+        }
+      } else {
+        showModal(); // Mostrar advertencia si faltan campos
       }
     });
   });
@@ -374,12 +415,12 @@
     btn.addEventListener("click", () => {
       if (currentSection > 0) {
         currentSection--;
-        showSection(currentSection); // Mostrar la sección anterior
+        showSection(currentSection);
       }
     });
   });
 
-  // Mostrar la primera sección al cargar la página
+  // Inicializar la sección activa
   showSection(currentSection);
 });
 
