@@ -16,6 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nacimiento = htmlspecialchars($_POST['nacimiento']);
     $lugar_nacimiento = htmlspecialchars($_POST['lugar_nacimiento']);
     $nombre_apellido = htmlspecialchars($_POST['nombre_apellido']);
+    $municipio = htmlspecialchars($_POST['municipio']);
     $direccion = htmlspecialchars($_POST['direccion']);
     $barrio = htmlspecialchars($_POST['barrio']);
     $celular = htmlspecialchars($_POST['celular']);
@@ -71,6 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $mail->Body .= "<strong>Nacimiento:</strong> $nacimiento<br>";
             $mail->Body .= "<strong>Lugar de Nacimiento:</strong> $lugar_nacimiento<br>";
             $mail->Body .= "<strong>Nombre Completo:</strong> $nombre_apellido<br>";
+            $mail->Body .= "<strong>Municipio de Residencia:</strong> $municipio<br>";
             $mail->Body .= "<strong>Dirección:</strong> $direccion<br>";
             $mail->Body .= "<strong>Barrio:</strong> $barrio<br>";
             $mail->Body .= "<strong>Celular:</strong> $celular<br>";
