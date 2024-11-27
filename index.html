@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<!---Coding By CodingLab | www.codinglabweb.com--->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--<title>Registration Form in HTML CSS</title>-->
+    <!---Custom CSS File--->
+    <link rel="stylesheet" href="style.css" />
+    <meta name="title" content="Inscripciones INTESA">
+    <link rel="icon" href="Recurso.png" type="image/png">
+  </head>
+  <body>
+    <section class="container">
+        <div class="container-img">
+            <img src="Recurso.png" alt="">
+        </div>
+        <br>
+      <header>Formulario de Registro</header>
+      <form id="multi-step-form" class="form" method="post" action="process_form.php">
+
+    
+      <div class="form-section active">
+        <div class="gender-box">
+            <h3>Documento de Identificación</h3>
+            <div class="gender-option">
+              <div class="gender">
+                <input type="radio" id="check-male" name="tipo_documento" value="Cedula" checked />
+                <label for="check-male">Cedula</label>
+              </div>
+              <div class="gender">
+                <input type="radio" id="check-female" value="Tarjeta de Identidad" name="tipo_documento" />
+                <label for="check-female">Tarjeta de Identidad</label>
+              </div>
+            </div>
+          </div>
+
+       
+
+        <div class="column">
+          <div class="input-box">
+            <label>Numero de Documento</label>
+            <input type="number" name="documento" required />
+          </div>
+
+          <div class="input-box">
+            <label>Expedida en </label>
+            <input type="text" name="expedida" required />
+          </div>
+      </div>
+      
+      <div class="input-box">
+            <label>Nacionalidad</label>
+            <div class="select-box">
+                <select name="nacionalidad">
+                    <option value="Colombiana">Colombiana</option>
+                    <option value="Venezolana">Venezolana</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Peruana">Peruana</option>
+                    <option value="Ecuatoriana">Ecuatoriana</option>
+                    <option value="Chilena">Chilena</option>
+                    <option value="Mexicana">Mexicana</option>
+                    <option value="Otra">Otra</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="input-box">
+              <label>Fecha Nacimiento</label>
+              <input type="date" placeholder="Enter birth date" name="nacimiento" required />
+            </div>
+
+            <div class="input-box">
+                <label>Lugar de Nacimiento</label>
+                <input type="text" placeholder="" name="lugar_nacimiento" required />
+            </div>
+        </div>
+
+        <div class="input-box">
+          <label>Nombres Y Apellidos</label>
+          <input type="text" placeholder="Nombres y Apellidos" name="nombre_apellido" required />
+        </div>
+
+        <div class="column">
+            <div class="input-box">
+              <label>Dirección</label>
+              <input type="text" placeholder="" name="direccion" required />
+            </div>
+
+            <div class="input-box">
+                <label>Barrio</label>
+                <input type="text" placeholder="" name="barrio" required />
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="input-box">
+              <label>Celular</label>
+              <input type="number" placeholder="" name="celular" required />
+            </div>
+
+            <div class="input-box">
+                <label>Telefono</label>
+                <input type="number" placeholder="" name="telefono" required />
+            </div>
+        </div>
+
+        <div class="input-box">
+            <label>Correo Electronico</label>
+            <input type="email" name="correo" required />
+        </div>
+
+    
+        <button type="button" class="next-btn">Siguiente &#8594;</button>
+      </div>
+
+      <div class="form-section">
+          <div class="gender-box">
+              <h3>Genero</h3>
+              <div class="gender-option">
+                <div class="gender">
+                  <input type="radio" id="check-male2" name="genero_tipo" value="Masculino" />
+                  <label for="check-male2">Masculino</label>
+                </div>
+                <div class="gender">
+                  <input type="radio" id="check-female3" name="genero_tipo" value="Femenino" />
+                  <label for="check-female3">Femenino</label>
+                </div>
+              </div>
+            </div>
+
+          <div class="column">
+              <div class="input-box">
+                  <label>Estrato</label>
+                  <div class="select-box">
+                      <select name="estrato">
+                          <option value="Estrato 1 (Bajo-bajo)">Estrato 1 (Bajo-bajo)</option>
+                          <option value="Estrato 2 (Bajo)">Estrato 2 (Bajo)</option>
+                          <option value="Estrato 3 (Medio-bajo)">Estrato 3 (Medio-bajo)</option>
+                          <option value="Estrato 4 (Medio)">Estrato 4 (Medio)</option>
+                          <option value="Estrato 5 (Medio-alto)">Estrato 5 (Medio-alto)</option>
+                          <option value="Estrato 6 (Alto)">Estrato 6 (Alto)</option>
+                      </select>
+                    </div>
+              </div>
+
+              <div class="input-box">
+                  <label>Estado Civil</label>
+                  <div class="select-box">
+                    
+                      <select  name="estado_civil">
+      
+                        <option value="Soltero/a">Soltero/a</option>
+                        <option value="Casado/a">Casado/a</option>
+                        <option value="Union Libre">Unión Libre</option>
+                        <option value="Separado/a">Separado/a</option>
+                        <option value="Divorciado/a">Divorciado/a</option>
+                        <option value="Viudo/a">Viudo/a</option>
+                      </select>
+                    </div>
+      
+              </div>
+          
+          </div>
+
+          <div class="column">
+              <div class="input-box">
+                  <label>Sisben</label>
+                  <div class="select-box">
+                      <select name="sisben">
+                          <option value="Grupo A (Población en pobreza extrema)">Grupo A (Población en pobreza extrema)</option>
+                          <option value="Grupo B (Población en pobreza moderada)">Grupo B (Población en pobreza moderada)</option>
+                          <option value="Grupo C (Población vulnerable)">Grupo C (Población vulnerable)</option>
+                          <option value="Grupo D (Población no vulnerable y no pobre)">Grupo D (Población no vulnerable y no pobre)</option>
+                      </select>
+                    </div>
+              </div>
+
+              <div class="input-box">
+                  <label>EPS</label>
+                  <div class="select-box">
+                      <select name="eps">
+                          <option value="sanitas">Sanitas</option>
+                          <option value="sura">Sura</option>
+                          <option value="compensar">Compensar</option>
+                          <option value="salud-total">Salud Total</option>
+                          <option value="famisanar">Famisanar</option>
+                          <option value="coomeva">Coomeva</option>
+                          <option value="medimas">Medimás</option>
+                          <option value="nueva-eps">Nueva EPS</option>
+                          <option value="cafesalud">Cafesalud</option>
+                          <option value="otras">Otra</option>
+                      </select>
+                    </div>
+              </div>
+          </div>
+
+          <div class="input-box">
+              <label>Nivel de Formación</label>
+              <div class="select-box">
+                
+                  <select name="nivel">
+
+                    <option>Primaria</option>
+                    <option>Secundaria</option>
+                    <option>Tecnico/a</option>
+                    <option>Tecnogolo/a</option>
+                    <option>Universitaria</option>
+                    <option>Posgrado</option>
+                  </select>
+                </div>
+          </div>
+
+          <div class="input-box">
+              <label>Ocupación</label>
+              <input type="text" name="ocupacion"  required />
+          </div>
+
+          <div class="input-box">
+              <label>Discapacidad</label>
+              <input type="text" name="discapacidad"  required />
+          </div>
+
+          <div class="input-box">
+              <label>Talla de Camisa</label>
+              <div class="select-box">
+                  <select name="talla">
+                      <option value="XS">XS (Extra Pequeña)</option>
+                      <option value="S">S (Pequeña)</option>
+                      <option value="M">M (Mediana)</option>
+                      <option value="L">L (Grande)</option>
+                      <option value="XL">XL (Extra Grande)</option>
+                      <option value="XXL">XXL (Doble Extra Grande)</option>
+                  </select>
+                </div>
+          </div>
+
+          <div class="input-box">
+              <label>¿Porque medio se enteró del Instituto?</label>
+              <div class="select-box">
+                  <select name="redes">
+                      <option value="Prensa">Prensa</option>
+                      <option value="Televisión">Televisión</option>
+                      <option value="Facebook">Facebook</option>
+                      <option value="Volante">Volante</option>
+                      <option value="Estudiante">Estudiante</option>
+                      <option value="Amigo">Amigo</option>
+                      <option value="Afiche Publicitario">Afiche Publicitario</option>
+                      <option value="Seminario">Seminario</option>
+                      <option value="Curso">Curso</option>
+                      <option value="Visita Colegio">Visita Colegio</option>
+                      <option value="Oficina">Oficina</option>
+                      <option value="Docente">Docente</option>
+                  </select>
+                </div>
+          </div>
+
+          <div class="column">
+            <button type="button" class="prev-btn"> &#8592; Atrás</button>
+            <button type="button" class="next-btn">Siguiente &#8594;</button>
+
+            <button style="display: none;" type="submit">Registrarme!</button>
+          </div>
+
+      </div>
+
+
+      <div class="form-section">
+
+        <div class="gender-box">
+          <h3>Sede donde deseas estudiar:</h3>
+          <div class="gender-option">
+            <div class="gender">
+              <input type="radio" id="sede" name="sede" value="virtual" />
+              <label for="sede">Virtual</label>
+            </div>
+            <div class="gender">
+              <input type="radio" id="sede1" name="sede" value="barrancabermeja" />
+              <label for="sede1">Barrancabermeja</label>
+            </div>
+            <div class="gender">
+              <input type="radio" id="sede2" name="sede" value="yondó" />
+              <label for="sede2">Yondó</label>
+            </div>
+            <div class="gender">
+              <input type="radio" id="sede3" name="sede" value="aguachica" />
+              <label for="sede3">Aguachica</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="gender-box">
+          <h3>¿Elije lo que deseas estudiar?</h3>
+          <div class="gender-option">
+            <div class="gender">
+              <input type="radio" id="destudiar" name="select_carrera" value="Tecnico" />
+              <label for="destudiar">Tecnico Laboral</label>
+            </div>
+            <div class="gender">
+              <input type="radio" id="destudiar1" name="select_carrera" value="Cursos" />
+              <label for="destudiar1">Cursos</label>
+            </div>
+            <div class="gender">
+              <input type="radio" id="destudiar2" name="select_carrera" value="Diplomados" />
+              <label for="destudiar2">Diplomados</label>
+            </div>
+            <div class="gender">
+              <input type="radio" id="destudiar3" name="select_carrera" value="Seminarios" />
+              <label for="destudiar3">Seminarios</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sección de selección para Técnico Laboral -->
+      <div id="select-tecnico" class="input-section input-box" style="display: none;">
+        <label for="tecnico-select">Elige la Carrera Técnico Laboral:</label>
+        <div class="select-box">
+          <select id="tecnico-select" name="carrera">
+            <option value="Auxiliar Administrativo">Auxiliar Administrativo</option>
+            <option value="Seguridad en el Trabajo">Seguridad en el Trabajo </option>
+            <option value="Auxiliar de Primera Infancia">Auxiliar de Primera Infancia </option>
+            <option value="Operador de Maquinaria Pesada">Operador de Maquinaria Pesada </option>
+            <option value="Mecánica Diesel Automotriz">Mecánica Diesel Automotriz</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Sección de texto para los otros -->
+      <div id="input-text" class="input-section input-box" style="display: none;">
+        <label for="input-text-field">Escribe el nombre del Curso/Diplomado/Seminario:</label>
+        <input type="text" name="name_curso" id="input-text-field" placeholder="Escribe aquí...">
+      </div>
+
+        <div class="column">
+          <button type="button" class="prev-btn"> &#8592; Atrás</button>
+          <button type="submit">Registrarme!</button>
+        </div>
+      </div>
+
+      
+      </div>
+      </form>
+    </section>
+  </body>
+
+  <script>
+   document.addEventListener("DOMContentLoaded", () => {
+  const formSections = document.querySelectorAll(".form-section");
+  const nextBtns = document.querySelectorAll(".next-btn");
+  const prevBtns = document.querySelectorAll(".prev-btn");
+
+  let currentSection = 0;
+
+  // Función para mostrar una sección específica
+  function showSection(index) {
+    formSections.forEach((section, i) => {
+      section.classList.toggle("active", i === index); // Mostrar solo la sección activa
+    });
+
+    // Desplazar hacia arriba al cambiar de sección
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  // Evento para botones "Siguiente"
+  nextBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (currentSection < formSections.length - 1) {
+        currentSection++;
+        showSection(currentSection); // Mostrar la siguiente sección
+      }
+    });
+  });
+
+  // Evento para botones "Atrás"
+  prevBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (currentSection > 0) {
+        currentSection--;
+        showSection(currentSection); // Mostrar la sección anterior
+      }
+    });
+  });
+
+  // Mostrar la primera sección al cargar la página
+  showSection(currentSection);
+});
+
+
+// Obtener los elementos de radio y las secciones
+const tecnicoRadio = document.getElementById('destudiar');
+const cursosRadio = document.getElementById('destudiar1');
+const diplomadosRadio = document.getElementById('destudiar2');
+const seminariosRadio = document.getElementById('destudiar3');
+
+const selectTecnico = document.getElementById('select-tecnico');
+const inputText = document.getElementById('input-text');
+
+// Función para ocultar ambas secciones
+function hideSections1() {
+  selectTecnico.style.display = 'none';
+  inputText.style.display = 'none';
+}
+
+// Función para mostrar la sección correspondiente
+function showSection1() {
+  hideSections1(); // Ocultar todas las secciones
+
+  if (tecnicoRadio.checked) {
+    selectTecnico.style.display = 'block'; // Mostrar el select para Técnico Laboral
+  } else {
+    inputText.style.display = 'block'; // Mostrar el campo de texto para los demás
+  }
+}
+
+// Escuchar cambios en los radios
+tecnicoRadio.addEventListener('change', showSection1);
+cursosRadio.addEventListener('change', showSection1);
+diplomadosRadio.addEventListener('change', showSection1);
+seminariosRadio.addEventListener('change', showSection1);
+
+
+
+  </script>
+</html>
